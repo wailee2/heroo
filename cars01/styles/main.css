@@ -1,0 +1,160 @@
+:root {
+    --dark-green: #008672;
+    --green: #d4ff93;
+    --red: #cf0202;
+    --black: #131516;
+    --vh: 1vh; /* Fallback */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--red);
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    background-color: var(--red);
+}
+
+.logo{
+    color: var(--green);
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 2.3rem;
+    color: var(--green);
+    font-size: 14px;
+}
+
+header ul li a{
+    font-size: 14px;
+    color: var(--green);
+}
+
+header .contact{
+    font-size: 14px;
+    color: var(--green);
+    background-color: var(--black);
+    padding: 10px 17px;
+    border-radius: 20px;
+}
+
+sectbion {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#hero{
+    background-color: var(--red);
+    heigxht: 100vh;
+}
+
+#hero .container{
+    backgrounnd: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');
+    height: 100%;
+    position: relative;
+}
+
+#hero .container {
+    gap: 1.5rem;
+    padding: 1.7rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+#hero .hero-left{
+    width: 47vw;
+}
+
+#hero .hero-left h1{
+    color: var(--green);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6.5rem;
+}
+
+#hero .hero-left p{
+    color: var(--black);
+    font-size: 1.5rem;
+    max-width: 25rem;
+}
+
+#hero .hero-right{
+    width: 53vw;
+}
+
+#hero .hero-right img{
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+
+
+
+@media (max-width: 769px) {
+    #hero .container {
+        transition: all 0.9s ease;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    #hero .hero-left, #hero .hero-right{
+        width: 100%;
+        transition: all 0.9s ease;
+    }
+    #hero .hero-left h1{
+        transition: all 0.9s ease;
+        font-size: 4.9rem;
+    }
+    #hero .hero-right img{
+        transition: all 0.9s ease;
+        margin-top: 1rem;
+        max-height: none;
+    }
+    header ul{
+        display: none;
+    }
+}
+
+@media (max-width: 481px) {
+    #hero .hero-left h1{
+        font-size: 4.5rem;
+    }
+}
+
+
+@supports (height: 100dvh) {
+    body {
+      height: 100dvh;
+    }
+}
